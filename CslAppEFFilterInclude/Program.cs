@@ -1,8 +1,6 @@
 ﻿using CslAppEFFilterInclude.Data;
-using CslAppEFFilterInclude.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
 
@@ -13,7 +11,7 @@ namespace CslAppEFFilterInclude
         static void Main(string[] args)
         {
             int count = 0;
-            DbContextOptionsBuilder<DatabaseSource> builder = 
+            DbContextOptionsBuilder<DatabaseSource> builder =
                 new DbContextOptionsBuilder<DatabaseSource>();
             builder.UseSqlServer("Server=127.0.0.1;Database=DatabaseSource;User Id=sa;Password=123456;");
             DbContextOptions<DatabaseSource> options = builder.Options;
