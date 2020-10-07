@@ -63,7 +63,7 @@ namespace CslAppEFFilterInclude
 
                 //var items = db.Item.Include(x => x.Sales).ToImmutableList();
                 var items = db.Item.AsNoTracking()
-                    .Include(x => x.Sales.Where(c => c.Value == 200).ToList())
+                    .Include(x => x.Sales.Where(c => c.Value == 200))
                     .ToImmutableList();
 
             }
